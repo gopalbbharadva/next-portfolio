@@ -1,7 +1,10 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
+import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 export default function Home() {
   return (
@@ -9,32 +12,43 @@ export default function Home() {
       {/* LEFT STATIC PART  */}
 
       <section
-        className='border-4 border-red w-4/12 h-screen
+        className='w-4/12 h-screen
         flex justify-start items-start flex-col sticky top-0'
       >
         {/* Basic intro div */}
-        <div className='border border-yellow'>
-          <h2>Brittany Chiang</h2>
-          <h4>Lead Engineer at Upstatement</h4>
-          <p>
+        <div className='py-12'>
+          <p className={`text-3xl font-extrabold ${poppins.className}`}>
+            Brittany Chiang
+          </p>
+          <p className={`font-mediuccwwm ${poppins.className}`}>
+            Lead Engineer at Upstatement
+          </p>
+          <p className={`text-xs text-light-400 pt-2 ${poppins.className}`}>
             I build accessible, inclusive products and digital experiences for
             the web.
           </p>
         </div>
 
         {/* Navigation between sections */}
-        <div className='border border-green'>
-          <p>About</p>
-          <p>Experience</p>
-          <p>Projects</p>
-        </div>
+        <ul className='list-disc ml-5'>
+          {['About', 'Experience', 'Projects'].map((item) => (
+            <li className={`text-sm font-normal ${poppins.className}`}>
+              {item}
+            </li>
+          ))}
+        </ul>
 
         {/* Social media links */}
-        <div className='border-4 border-pink mt-auto'>
-          <a href=''>Github</a>
-          <a href=''>Twitter</a>
-          <a href=''>LinkedIn</a>
-          <a href=''>Email</a>
+        <div className='mt-auto flex justify-center items-start gap-10 pb-10'>
+          <a href=''>
+            <BsGithub size='22' className='text-light-400' />
+          </a>
+          <a href=''>
+            <BsTwitter size='22' className='text-light-400' />
+          </a>
+          <a href=''>
+            <BsLinkedin size='22' className='text-light-400' />
+          </a>
         </div>
       </section>
 

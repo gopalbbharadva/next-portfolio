@@ -13,12 +13,13 @@ const config: Config = {
         light: {
           100: '#d1d5db',
           300: '#cbd5e1',
+          400: '#94a3b8',
         },
-        red:'#e11d48',
-        green:'#059669',
-        yellow:'#eab308',
-        orange:'#f97316',
-        pink:'#db2777'
+        red: '#e11d48',
+        green: '#059669',
+        yellow: '#eab308',
+        orange: '#f97316',
+        pink: '#db2777',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
