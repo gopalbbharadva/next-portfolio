@@ -9,14 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#a78bfa',
+        primary: '#f59e0b',
         light: {
           100: '#d1d5db',
           300: '#cbd5e1',
           400: '#94a3b8',
         },
+        // yellow: {
+        //   100: '#fef3c7',
+        // },
         red: '#e11d48',
-        green: '#059669',
+        // green: '#059669',
         yellow: '#eab308',
         orange: '#f97316',
         pink: '#db2777',
